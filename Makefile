@@ -3,7 +3,7 @@ target = /usr/local/bin/og-cli
 # Build related variables
 buildTime  = `date --iso-8601=ns`
 buildHash  = `git log -1 --pretty=format:"%h"`
-buildVsn   = $(git tag --points-at $(buildHash))
+buildVsn   = $$(git tag --points-at $(buildHash))
 buildState = `(git diff --quiet && echo 'clean') || echo 'dirty'`
 
 buildFlagsPrefix = github.com/thiagohdeplima/opengalaxy-cli/cmd
