@@ -52,3 +52,7 @@ func (response *Response) setBody(httpResponse *http.Response) {
 
 	response.Body = string(body)
 }
+
+func (response *Response) setStatus(httpResponse *http.Response) {
+	response.Status = httpResponse.StatusCode
+}

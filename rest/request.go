@@ -47,6 +47,7 @@ func (request *Request) Send() (Response, error) {
 
 	// set all response entities
 	response.setBody(httpResponse)
+	response.setStatus(httpResponse)
 	response.setHeaders(httpResponse)
 	response.setDecodedBody()
 
