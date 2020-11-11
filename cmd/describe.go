@@ -14,7 +14,7 @@ func describeExec(cmd *cobra.Command, args []string) {
 
 // DescribeCmd command to list resources
 var DescribeCmd = &cobra.Command{
-	Use:                   "describe",
+	Use:                   "describe [ARGUMENT]",
 	Short:                 "describe a resource",
 	Args:                  helpers.ValidateArgs,
 	ValidArgs:             []string{"galaxies"},
