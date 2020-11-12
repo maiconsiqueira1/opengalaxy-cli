@@ -3,6 +3,7 @@ package cmd
 import (
 	"github.com/spf13/cobra"
 	"github.com/thiagohdeplima/opengalaxy-cli/cmd/helpers"
+	"github.com/thiagohdeplima/opengalaxy-cli/runner"
 )
 
 // ListCmd command to list resources
@@ -11,7 +12,7 @@ var ListCmd = &cobra.Command{
 	Short:     "list [ARGUMENT]",
 	Args:      helpers.ValidateArgs,
 	ValidArgs: []string{"galaxies"},
-	Run:       ExecuteCommand,
+	Run:       runner.ExecuteCommand,
 
 	DisableFlagsInUseLine: true,
 }
