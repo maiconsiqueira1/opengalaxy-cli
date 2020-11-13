@@ -32,4 +32,6 @@ var VersionCmd = &cobra.Command{
 	Use:   "version",
 	Short: "prints the cli version",
 	Run:   versionExec,
+
+	DisableFlagsInUseLine: true,
 }
